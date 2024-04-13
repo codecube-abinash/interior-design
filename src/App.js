@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Slider from './components/Slider/Slider';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 
 function App() {
+  const [theme, setTheme] = useState('day');
+
+  useEffect(() => {
+    const determineTheme = () => {
+      const currentTime = new Date().getHours();
+      return (currentTime >= 18 || currentTime < 6) ? 'dusk' : 'day';
+    };
+
+    setTheme(determineTheme());
+  }, []);
+
+  const determineTheme = () => {
+    const currentTime = new Date().getHours();
+    return (currentTime >= 18 || currentTime < 6) ? 'dusk' : 'day';
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar companyName="askbaboos" />
+      <Slider />
+    </>
   );
 }
 

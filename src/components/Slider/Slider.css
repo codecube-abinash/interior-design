@@ -1,0 +1,45 @@
+.slider-container {
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Add transition for smooth sliding */
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure images don't have extra space below */
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px; /* Adjust positioning */
+}
+
+.next {
+  right: 10px; /* Adjust positioning */
+}

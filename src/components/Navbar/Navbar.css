@@ -1,0 +1,47 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    top: 0;
+    background-color: #7f4924;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 1000;
+    transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+nav.small {
+    height: 3rem;
+  }
+
+.company-name{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #E8DACC;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+li>a {
+    text-decoration: none;
+    color: #E8DACC;
+}
+
+a:hover, a:active{
+    text-decoration: underline;
+}

@@ -1,0 +1,21 @@
+.footer-container {
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.footer-container>ul {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    list-style: none;
+
+}
+
+.footer-container>ul>li.header {
+    color: aqua;
+    font-size: 1rem;
+    font-weight: 400;
+}

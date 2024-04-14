@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Slider.css';
-import Slide1 from '../../slide_1.png';
-import Slide2 from '../../slide_2.png';
-import Slide3 from '../../slide_3.png';
+import Slide1 from '../../assets/images/slide_1.png';
+import Slide2 from '../../assets/images/slide_2.png';
+import Slide3 from '../../assets/images/slide_3.png';
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

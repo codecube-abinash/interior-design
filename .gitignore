@@ -1,9 +1,11 @@
 # dependencies
 /node_modules
 
+
 # build output
 /build
 /dist
+/assets
 
 # environment variables
 .env.local

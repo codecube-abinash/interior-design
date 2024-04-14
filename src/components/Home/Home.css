@@ -1,0 +1,33 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50vh;
+    overflow: hidden;
+    background-image: url(../../assets/images/kitchen.jpg);
+    background-position: center;
+}
+
+.about-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    text-align: center;
+}
+.about-text{
+    position: relative;
+    color: white;
+}
+
+.about-right {}
+
+.about-right>img {
+    width: 100%;
+    height: auto;
+}

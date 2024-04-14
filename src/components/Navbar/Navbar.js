@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Navbar.css';
 
 const Navbar = (props) => {
+    console.log('Navbar loaded')
     const { companyName } = props;
 
     useEffect(() => {
@@ -29,7 +30,10 @@ const Navbar = (props) => {
             <div className="company-name">{companyName}</div>
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/local-interiors">Local Interiors</a>
                 </li>
                 <li>
                     <a href="#">About Us</a>

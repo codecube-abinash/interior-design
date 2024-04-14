@@ -6,7 +6,7 @@ nav{
     top: 0;
     background-color: #7f4924;
     padding: 0 1rem;
-    position: fixed;
+    position: sticky;
     z-index: 1000;
     transition: background-color 0.3s ease, height 0.3s ease;
 }

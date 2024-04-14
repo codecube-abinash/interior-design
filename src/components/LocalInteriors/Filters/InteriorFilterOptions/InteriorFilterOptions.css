@@ -1,0 +1,22 @@
+.option {
+    font-size: 0.7rem;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    border: 1px solid #7f4924;
+    border-radius: 5%;
+    color: #7f4924;
+}
+
+.option:hover,
+.option:hover.active {
+    background-color: #7f4924;
+    color: #E8DACC;
+    cursor: pointer;
+}
+
+.option-container {
+    margin: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}

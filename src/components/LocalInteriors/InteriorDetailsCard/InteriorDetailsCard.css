@@ -2,17 +2,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: calc(100vh - 5rem);
     margin: 0 auto;
     display: flex;
 }
 
 .details{
     flex-grow: 1;
-}
-
-.filter-container {
-    flex-basis: 20%;
-    height: 100%;
-    overflow-x: auto;
 }

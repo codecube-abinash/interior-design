@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './Navbar.css';
 
 const Navbar = (props) => {
-    console.log('Navbar loaded')
     const { companyName } = props;
 
     useEffect(() => {

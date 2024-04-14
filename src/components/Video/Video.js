@@ -23,7 +23,7 @@ const Video = () => {
                 <source src={video} type="video/mp4" />
             </video>
 
-            <div class="content">
+            <div className="content">
                 {/* <h1>Welcome to My Website</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p> */}
             </div>

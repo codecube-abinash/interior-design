@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Filters.css';
 import InteriorFilterOptions from './InteriorFilterOptions/InteriorFilterOptions';
 
-const Filters = (prop) => {
+const Filters = ({ filters }) => {
     return (
-        <div >
-            {prop?.filters.map(filter => (
+        <div className='filter-container'>
+            {filters?.map(filter => (
                 <div key={filter?.id}>
-                    <div className='filter-header' >{filter?.name}</div>
+                    <div className='filter-header'>{filter?.name}</div>
                     <InteriorFilterOptions options={filter?.values} />
                 </div>
             ))}

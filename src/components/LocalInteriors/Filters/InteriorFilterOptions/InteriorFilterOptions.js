@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './InteriorFilterOptions.css';
 
-const InteriorFilterOptions = (prop) => {
+const InteriorFilterOptions = ({ options }) => {
     return (
         <div className='option-container'>
-            {prop.options.map(option => (
+            {options.map(option => (
                 <span className='option' key={option}>{option}</span>
             ))}
         </div>

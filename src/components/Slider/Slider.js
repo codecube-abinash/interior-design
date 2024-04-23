@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Slider.css';
-import Slide1 from '../../assets/images/slide_1.png';
-import Slide2 from '../../assets/images/slide_2.png';
-import Slide3 from '../../assets/images/slide_3.png';
 
-const Slider = () => {
+const Slider = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(goToNextSlide, 4000);
         return () => clearInterval(interval);
     }, [currentIndex]);
-
 
     const goToPreviousSlide = () => {
         const index = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
@@ -22,12 +18,6 @@ const Slider = () => {
         const index = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
         setCurrentIndex(index);
     };
-
-    const slides = [
-        Slide1,
-        Slide2,
-        Slide3
-    ];
 
     const slideStyle = {
         transform: `translateX(-${currentIndex * 100}%)`

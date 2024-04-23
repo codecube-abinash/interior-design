@@ -34,16 +34,17 @@
     color: #7f4924;
 }
 
-.service-box>.service-logo {
+.service-box > .service-logo {
     border: 0.1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-radius: 50%;
     border: 0.5rem solid #7f4924;
     height: 10rem;
     width: 10rem;
+    transition: box-shadow 0.3s ease;
 }
 
-.service-box>.service-logo:hover {
+.service-box > .service-logo:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 

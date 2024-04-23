@@ -10,7 +10,7 @@
 .option:hover,
 .option:hover.active {
     background-color: #7f4924;
-    color: #E8DACC;
+    color: #e8dacc;
     cursor: pointer;
 }
 

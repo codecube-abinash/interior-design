@@ -3,12 +3,13 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 
 .slider {
   display: flex;
-  transition: transform 0.5s ease; /* Add transition for smooth sliding */
+  transition: transform 0.5s ease;
 }
 
 .slide {
@@ -18,8 +19,8 @@
 
 .slide img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure images don't have extra space below */
+  height: auto;
+  display: block;
 }
 
 .prev,
@@ -37,9 +38,9 @@
 }
 
 .prev {
-  left: 10px; /* Adjust positioning */
+  left: 10px;
 }
 
 .next {
-  right: 10px; /* Adjust positioning */
+  right: 10px;
 }

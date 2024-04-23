@@ -1,4 +1,8 @@
-.filter-header{
+.filter-container {
+    background-color: #dedede;
+}
+
+.filter-header {
     color: #0e0e0e;
-    margin: 0.5rem;
+    padding: 0.5rem;
 }

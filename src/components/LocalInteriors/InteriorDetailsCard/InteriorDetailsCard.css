@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .local-interiors-container {
     position: relative;
     overflow: hidden;
@@ -6,6 +12,31 @@
     display: flex;
 }
 
-.details{
+.details {
     flex-grow: 1;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #7f4924;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.verify-icon {
+    color: green;
+}
+
+.card {
+    cursor: pointer;
+    padding-left: 0.95rem;
+}
+
+.card.selected {
+    border-left-color: #7f4924;
+    border-left-width: 1rem;
+    border-left-style: solid;
+    padding-left: 0 !important;
 }

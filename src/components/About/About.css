@@ -20,12 +20,11 @@
     padding: 2rem;
     text-align: center;
 }
-.about-text{
+
+.about-text {
     position: relative;
     color: white;
 }
-
-.about-right {}
 
 .about-right>img {
     width: 100%;

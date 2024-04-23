@@ -1,46 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './Navbar.css';
 
-const Navbar = (props) => {
-    const { companyName } = props;
+const Navbar = ({ companyName }) => {
+    const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
-        const scrollFunction = () => {
-            const navbar = document.getElementById("navbar");
-            if (navbar) {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    navbar.classList.add("small");
-                } else {
-                    navbar.classList.remove("small");
-                }
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
             }
         };
 
-        window.addEventListener('scroll', scrollFunction);
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', scrollFunction);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     return (
-        <nav id="navbar">
-            <div className="company-name">{companyName}</div>
-            <ul>
-                <li>
+        <nav id="navbar" className={`nav-container ${isScrolled ? 'small' : ''}`}>
+            <div className="navbar-name">{companyName}</div>
+            <ul className='menu-list'>
+                <li className='menu-item'>
                     <a href="/">Home</a>
                 </li>
-                <li>
+                <li className='menu-item'>
                     <a href="/local-interiors">Local Interiors</a>
                 </li>
-                <li>
+                <li className='menu-item'>
                     <a href="#">About Us</a>
                 </li>
-                <li>
+                <li className='menu-item'>
                     <a href="#">Contact Us</a>
                 </li>
-                <li>
+                <li className='menu-item'>
                     <div className="form-check form-switch">
                         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                         <label className="form-check-label" htmlFor="flexSwitchCheckDefault"></label>
@@ -52,11 +49,11 @@ const Navbar = (props) => {
 };
 
 Navbar.propTypes = {
-    companyName: PropTypes.string
+    companyName: PropTypes.string,
 };
 
 Navbar.defaultProps = {
-    companyName: "Please provide the company name here"
+    companyName: "Please provide the company name here",
 };
 
 export default Navbar;

@@ -37,10 +37,32 @@ function App() {
     return (currentTime >= 18 || currentTime < 6) ? 'dusk' : 'day';
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Navbar companyName="askbaboos" />
-      <div className="container-fluid">
+      <div className={`display-container ${isScrolled ? 'small' : ''}`}>
         <RouterProvider router={router} />
       </div>
     </>

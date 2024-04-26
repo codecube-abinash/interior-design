@@ -40,7 +40,9 @@ function App() {
   return (
     <>
       <Navbar companyName="askbaboos" />
-      <RouterProvider router={router} />
+      <div className="container-fluid">
+        <RouterProvider router={router} />
+      </div>
     </>
   );
 }

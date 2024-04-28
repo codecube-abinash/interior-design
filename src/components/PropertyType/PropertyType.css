@@ -1,0 +1,25 @@
+.property-type-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    width: 25rem;
+}
+
+.property-type-container>a {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 2rem;
+}
+
+.property-type-container>a:hover {
+    background-color: #7f4924;
+}
+
+.property-type-container>a.active {
+    background-color: #7f4924;
+}

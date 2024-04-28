@@ -1,0 +1,53 @@
+.city-selector-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.city-selector-icon-list {
+    max-width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.city-selector-icon-list::-webkit-scrollbar {
+    display: none;
+}
+
+.city-selector-element {
+    width: 5rem;
+    margin: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.city-selector-icon {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.city-selector-name {
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+/* Hover effect */
+.city-selector-icon:hover,
+.city-selector-element.active > .city-selector-icon {
+    border: 0.25rem solid #7f4924;
+}
+
+/* Arrow icon style */
+.city-selector-icon-arrow {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+}

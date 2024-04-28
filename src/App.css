@@ -1,27 +1,37 @@
-*{
+/* Global styles */
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font: inherit; /* Inherit font styles from browser defaults */
+  color: #000;  /* Set default text color */
 }
-/* Day theme styles */
+
+/* Theme styles */
+.app {
+  background-color: switch(#000, #ffffff, var(--theme));  /* Use var(--theme) for color */
+  color: switch(#ffffff, #000, var(--theme));           /* Use var(--theme) for color */
+}
+
 .app.day {
-  background-color: #ffffff;
-  color: #000000;
+  --theme: #ffffff;  /* Set theme to white for day mode */
 }
 
-/* Dusk theme styles */
 .app.dusk {
-  background-color: #333333;
-  color: #ffffff;
+  --theme: #333333;  /* Set theme to dark for dusk mode */
 }
 
-.display-container{
+/* App container styles */
+.app-container {
   position: absolute;
   top: 5rem;
-  height: calc(100vh - 5rem) ;
+  bottom: 0;  /* Use bottom instead of calc for simpler height calculation */
+  left: 0;
+  right: 0;
+  height: calc(100vh - 5rem); /* Maintain height calculation for consistency */
 }
 
-.display-container.small {
-  height: calc(100vh - 3rem) ;
+.app-container.small {
   top: 3rem;
+  height: calc(100vh - 3rem);
 }

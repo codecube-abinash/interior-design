@@ -4,6 +4,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 import Home from './components/Home/Home';
 import LocalInteriors from './components/LocalInteriors/LocalInteriors';
+import LocalInteriorsList from './components/LocalInteriors/LocalInteriorsList/LocalInteriorsList';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/local-interiors",
     element: <LocalInteriors />,
+  },
+  {
+path: "/local-interiors-list",
+    element: <LocalInteriorsList />,
   },
 ]);
 
@@ -62,7 +67,7 @@ function App() {
   return (
     <>
       <Navbar companyName="askbaboos" />
-      <div className={`display-container ${isScrolled ? 'small' : ''}`}>
+      <div className={`app-container ${isScrolled ? 'small' : ''}`}>
         <RouterProvider router={router} />
       </div>
     </>
